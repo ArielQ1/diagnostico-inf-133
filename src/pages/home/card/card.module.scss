@@ -1,14 +1,14 @@
 .card {
     width: 100%;
-    height: 500px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     position: relative;
 
     .img_poke {
         width: 160px;
-        margin: 30px auto;
-        z-index: 20;
+        margin: 0 auto;
+        
     }
 
 
@@ -31,8 +31,8 @@
         padding: 1px 4px;
         font-size: .85rem;
         border-radius: 5px;
-        display: inline-block;
-
+        
+        
     }
 
     .name_card {
@@ -48,16 +48,17 @@
     .altura_poke {
         margin-top: 2px;
         font-size: .75rem;
-        text-transform: capitalize;
-        display: block;
+        
+        display: flex;
         color: #484848;
+        
     }
 
     .peso_poke {
         margin-top: 2px;
         font-size: .75rem;
-        text-transform: capitalize;
-        display: block;
+        
+        display: flex;
         color: #484848;
     }
 
@@ -67,6 +68,11 @@
         text-transform: capitalize;
         display: block;
         color: #484848;
+        display: flex;
+    }
+
+    .stats_poke_about {
+        margin-top: 145px;
     }
 
     .stats_poke {
@@ -74,6 +80,7 @@
     }
 
     .div_stats {
+        
         margin: 4px 0;
         width: 100%;
         padding: 1px;
@@ -90,9 +97,30 @@
             }
             .numero {
                 width: 22px;
-                text-transform: capitalize;
+                
                 color: #484848;
             }
         }
+    }
+
+    .div_hability {
+        display: flex;
+        margin-left: 20%;
+    }
+
+    .div_type {
+        display: flex;
+        margin-left: 30%;
+    }
+
+    .div_others_height {
+        display: flex;
+        margin-left: 28%;
+
+    }
+    .div_others_weight {
+        display: flex;
+        margin-left: 27%;
+
     }
 }

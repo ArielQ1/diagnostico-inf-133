@@ -7,7 +7,7 @@ export default function Card({card}) {
 
     const [itemPokemon, setitemPokemon] = useState({})
     const [especiePokemon, setEspeciePokemon] = useState({})
-    
+    console.log(itemPokemon);
 
     useEffect(() => {
         const dataPokemon =async () => {
@@ -30,23 +30,42 @@ export default function Card({card}) {
 
     }, []);
 
-    console.log(card);
     return (
         <div className={css.card}>
-            <img className={css.img_poke} src={itemPokemon?.sprites?.other["official-artwork"]?.front_default} alt="pokemon" />
+            
             <div className={css.sub_card}>
                 <h3>My pokemon</h3>
-                <strong className={css.name_card}> name </strong>
+                <strong className={css.name_card}> {itemPokemon.name} </strong>
                 <strong className={css.id_card}> 001 </strong>
+                <img className={css.img_poke} src={itemPokemon?.sprites?.other["official-artwork"]?.front_default} alt="pokemon" />
                 <h4 className={css.stats_poke}>About</h4>
+                <h4 className={css.habitad_poke}>
+                    Type : 
+                    <div className={css.div_type}>
+                        {itemPokemon?.types?.map((ti, index) => {
+                            return <h4 key={index}>{ti.type.name},</h4>;
+                        })}
+                    </div>
+                </h4>
                 <h4 className={css.altura_poke}>
-                    10 cm
+                    Height: 
+                    <div className={css.div_others_height}>
+                        {itemPokemon.height/10} m
+                    </div>
                 </h4>
                 <h4 className={css.peso_poke}>
-                    peso
+                    Weight: 
+                    <div className={css.div_others_weight}>
+                        {itemPokemon.weight/10} kg
+                    </div>
                 </h4>
                 <h4 className={css.habitad_poke}>
-                    habitad
+                    habilities : 
+                    <div className={css.div_hability}>
+                        {itemPokemon?.abilities?.map((ti, index) => {
+                            return <h4 key={index}>{ti.ability.name},</h4>;
+                        })}
+                    </div>
                 </h4>
                 <h4 className={css.stats_poke}>Stats</h4>
                 <div className={css.div_stats}>
@@ -57,6 +76,8 @@ export default function Card({card}) {
                         </h6>;
                     } )}
                 </div>
+
+
             </div>
 
         </div>
