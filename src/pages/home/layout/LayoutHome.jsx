@@ -10,23 +10,36 @@ export default function LayoutHome() {
 
     useEffect(() => {
         const api = async () => {
-            const apiPoke = await axios.get(`${URL_POKEMON}`);
+            const apiPoke = await axios.get(`${URL_POKEMON}/?offset=0&limit=${30}`);
 
             setarrayPokemon(apiPoke.data.results);
         }
 
         api();
     }, []);
+
+ /*   useEffect(() => {    
+    
+        const api = async () => {
+          const apiPoke = await axios.get(${URL_POKEMON}/?offset=0&limit=${limit});
+          setArrayPokemon(apiPoke.data.results);
+        }
+        
+        api();
+      }, []);*/
+
     
   return (
     <div className={css.layout}>
         <Header/>
-
-
         <div className={css.card_content}>
-            {arrayPokemon.map((card, index) => {
-                return <Card key={index} card={card} />;
-            })}
+
+            {arrayPokemon.slice(0,45).map((card, index) => (
+                (index + 1) % 5 === 0 ? (
+                    <Card key={index} card={card} />
+                ):null
+                
+            ))}
         </div>
     </div>
   );

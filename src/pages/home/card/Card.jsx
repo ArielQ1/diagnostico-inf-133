@@ -6,7 +6,6 @@ import { URL_POKEMON } from '../../../api/apiRest';
 export default function Card({card}) {
 
     const [itemPokemon, setitemPokemon] = useState({})
-    const [especiePokemon, setEspeciePokemon] = useState({})
     console.log(itemPokemon);
 
     useEffect(() => {
