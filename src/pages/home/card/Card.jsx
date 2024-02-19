@@ -30,13 +30,23 @@ export default function Card({card}) {
 
     }, []);
 
+    let pokeId = itemPokemon?.id?.toString();
+
+    if(pokeId?.length === 1){
+        pokeId = "#00" + pokeId;
+    } else if(pokeId?.length === 2){
+        pokeId = "#0" + pokeId;
+    }else{
+        pokeId = "#"+pokeId;
+    }
+
     return (
         <div className={css.card}>
             
             <div className={css.sub_card}>
                 <h3>My pokemon</h3>
                 <strong className={css.name_card}> {itemPokemon.name} </strong>
-                <strong className={css.id_card}> 001 </strong>
+                <strong className={css.id_card}> {pokeId} </strong>
                 <img className={css.img_poke} src={itemPokemon?.sprites?.other["official-artwork"]?.front_default} alt="pokemon" />
                 <h4 className={css.stats_poke}>About</h4>
                 <h4 className={css.habitad_poke}>
