@@ -1,9 +1,10 @@
 .card {
     width: 100%;
-    height: 480px;
+    height: 490px;
     display: flex;
     flex-direction: column;
     position: relative;
+
 
     .img_poke {
         width: 160px;
@@ -13,32 +14,36 @@
 
 
     .sub_card {
+        
         position: absolute;
         border-radius: 10px;
-        background-color: #ddd;
+
         min-height: 370px;
         padding: 15px;
         width: 100%;
         margin-top: 10px;
         padding-top: 15px;
-        border: 1px solid #424242;
+
     }
 
     .id_card {
-        background-color: #fff;
-        border: 1px solid #424242dd;
+        color: #7682b3;
         width: auto;
         padding: 1px 4px;
         font-size: .85rem;
         border-radius: 5px;
-        
+        position: absolute;
+        top: 20;
+        right: 20%;
         
     }
 
     .name_card {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #314082;
         margin-top: 8px;
         padding: 1px 4px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-transform: capitalize;
         display: block;
         font-weight: 900;
@@ -97,8 +102,8 @@
             }
             .numero {
                 width: 22px;
-                
-                color: #484848;
+                font-weight: 750;
+                color: #1b1a1a;
             }
         }
     }
@@ -106,21 +111,26 @@
     .div_hability {
         display: flex;
         margin-left: 20%;
+        font-weight: 900;
+        color: #1b1a1a;
     }
 
     .div_type {
         display: flex;
         margin-left: 30%;
+        font-weight: 800;
+        color: #1b1a1a;
     }
 
     .div_others_height {
         display: flex;
         margin-left: 28%;
+        font-weight: 600;
 
     }
     .div_others_weight {
         display: flex;
         margin-left: 27%;
-
+        font-weight: 600;
     }
 }

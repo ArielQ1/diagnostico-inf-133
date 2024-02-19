@@ -45,8 +45,8 @@ export default function Card({card}) {
             <div className={css.sub_card}>
                 <h3>My pokemon</h3>
                 <strong className={css.name_card}> {itemPokemon.name} </strong>
-                <strong className={css.id_card}> {pokeId} </strong>
                 <img className={css.img_poke} src={itemPokemon?.sprites?.other["official-artwork"]?.front_default} alt="pokemon" />
+                <strong className={css.id_card}> {pokeId} </strong>
                 <h4 className={css.stats_poke}>About</h4>
                 <h4 className={css.habitad_poke}>
                     Type : 
