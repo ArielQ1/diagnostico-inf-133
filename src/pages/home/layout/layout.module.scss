@@ -3,9 +3,21 @@
     max-width: calc(100% - 30px);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 290px 290px 290px;
+    grid-template-columns: repeat(3, 290px);
     grid-gap: 25px;
     padding-bottom: 30px;
     justify-content: center;
     align-content: center;
+}
+@media (width <= 960px) {
+    .card_content{
+        grid-template-columns: repeat(2,290px);
+        grid-gap: 25px;
+    }
+}
+@media (width <= 630px) {
+    .card_content {
+        grid-template-columns: 290px;
+        grid-gap: 25px;
+    }
 }
